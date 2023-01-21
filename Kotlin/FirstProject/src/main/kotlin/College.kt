@@ -21,22 +21,22 @@ class College {
     }
 }
 fun main() {
-    var clgObj = College()
+    val clgObj = College()
     print("Enter College Name : ")
     clgObj.collegeName = readln()
     print("Enter Branch Name : ")
-    var branch = clgObj.Branch()
+    val branch = clgObj.Branch()
     branch.branchName = readln()
     print("Enter Branch Code : ")
-    clgObj.Branch().branchCode = readln()
+    branch.branchCode = readln()
+    val std = clgObj.Student()
     print("Enter Student Name : ")
-    clgObj.Student().studentName = readln()
+    std.studentName = readln()
     print("Enter Student Place : ")
-    clgObj.Student().studentPlace = readln()
+    std.studentPlace = readln()
 
     println("Student's details :-")
     clgObj.displayClg()
-    clgObj.Branch().displayBranch()
     branch.displayBranch()
-    clgObj.Student().displayStudent()
+    std.displayStudent()
 }
