@@ -4,11 +4,11 @@ fun main() {
     var crudObj = CRUD()
     crudObj.createConnection()
     var database:HashMap<String,ArrayList<String>> = HashMap()
-    while(true){
+    whileloop@while(true){
         println("----Perform CRUD operations----")
         println("select options\n 1:Create Table\n " +
                 "2:Insert into Table\n " +
-                "3:Search In Table")
+                "3:Search In Table\n 4:Exit")
         when(readln().toInt()){
             1 -> {
                 print("Enter table name :")
@@ -41,6 +41,7 @@ fun main() {
                     println("Table Absent")
                 }
             }
+            4 -> break@whileloop
         }
 
     }
